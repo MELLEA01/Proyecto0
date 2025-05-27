@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mellea Online</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="img/LOGO PRUEBA2.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<header>
+		<div class="container-navbar">
+			<nav class="navbar container">
+
+				<div class="head">
+					<div class="logo">
+						<a href="#"><img class="logo-img" src="img/LOGO PRUEBA.png" alt=""></a>
+					</div>
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="../index.html">Inicio</a></li>
+						<li><a href="../NOSOTROS/index.html">Nosotros</a></li>
+						<li><a href="index.html">Productos</a></li>
+						<li><a href="#Contacto">Contacto</a></li>
+					</ul>
+			</nav>
+<!-- Botón de Carrito -->
+<button id="cart-btn" onclick="openCart()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span id="cart-count">0</span>
+</button>
+
+<!-- Carrito -->
+<div id="cart" class="cart">
+  <h2>Carrito de Compras</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: Q<span id="cart-total">0.00</span></p>
+
+  <hr>
+  <h3>Formulario de Compra</h3>
+  <form id="checkout-form">
+    <label>Método de Pago:</label><br>
+    <input type="radio" name="metodoPago" value="Tarjeta" required> Tarjeta<br>
+    <input type="radio" name="metodoPago" value="Depósito" required> Depósito<br><br>
+
+    <label>Dirección:</label><br>
+    <input type="text" name="direccion" required><br>
+
+    <label>Zona:</label><br>
+    <input type="text" name="zona" required><br>
+
+    <label>Departamento:</label><br>
+    <select name="departamento" required>
+      <option value="">Seleccione uno</option>
+      <option>Guatemala</option>
+      <option>Escuintla</option>
+      <option>Chimaltenango</option>
+      <option>Quetzaltenango</option>
+      <!-- Agrega más departamentos si quieres -->
+    </select><br><br>
+
+    <button type="submit">Finalizar Compra</button>
+  </form>
+  <br>
+  <button onclick="clearCart()">Vaciar carrito</button>
+  <button onclick="closeCart()">Cerrar</button>
+</div>
+
+	
+		</div>
+	</header>
+
+	<section class="banner">
+		<div class="content-banner">
+			<p>Hidrata tu piel</p>
+			<h2>Con Miel<br />100% Natural</h2>
+			<a href="#">Comprar ahora</a>
+		</div>
+	</section>
+
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>Envío gratuito a toda Guatemala</span>
+					<p>En pedido superior a Q. 1,500.00</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al (+502) 5322-9522</p>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="container top-products">
+			<h1 class="heading-1">Base de Miel</h1>
+
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Producto 1.jpg" alt="Producto 1" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Jabon de miel 50Grs</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">Q25.00</p>
+
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Producto 3.jpg" alt="producto 3" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+						</div>
+						<h3>Jabon de miel con avena</h3>
+						<p class="price-Prox"> Proximamente </p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Especial 3.jpg" alt="Italiano 4" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+
+						</div>
+						<h3>Jabon de miel con escencia de limon</h3>
+						<p class="price-Prox">Proximamente</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery">
+			<img src="img/Panal.jpg" alt="Gallery Img1" class="gallery-img-1" /><img src="img/Abejas.jpg"
+				alt="Gallery Img2" class="gallery-img-2" /><img src="img/Nosotros 4.jpg" alt="Gallery Img3"
+				class="gallery-img-3" /><img src="img/Abejas2.jpg" alt="Gallery Img4" class="gallery-img-4" /><img
+				src="img/Abejas3.jpg" alt="Gallery Img5" class="gallery-img-5" />
+		</section>
+
+
+		<section class="container blogs">
+			<h1 class="heading-1">Nosotros</h1>
+
+			<div class="container-blogs">
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/Historia.jpg" alt="Imagen Blog 1" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Historia</h3>
+						<span>11 de enero 2025</span>
+						<p>
+							A inicios de 2025, un grupo de ocho jóvenes con diversas habilidades decidió emprender un
+							proyecto enfocado en el cuidado natural de la piel. Identificando una necesidad común,
+							crearon Tesoros Colmenares, S.A., empresa dedicada a la elaboración de jabones artesanales a
+							base de miel pura. Inspirados por el trabajo colaborativo de las abejas, cada integrante
+							aportó sus talentos en diseño, formulación, empaque y promoción. Su marca, Mellea, refleja
+							la esencia del proyecto: productos naturales, innovación, respeto al medio ambiente y el
+							compromiso de transformar una idea en una empresa con visión de futuro.
+						</p>
+						<a href="../NOSOTROS/index.html">
+							<div class="btn-read-more">Leer más</div>
+						</a>
+
+
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/Proceso.jpeg" alt="Imagen Blog 2" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Proceso</h3>
+						<span>16 de Septiembre 2025</span>
+						<p>
+							La fabricación de jabones de miel es un proceso artesanal que combina ingredientes naturales
+							para crear un producto suave, nutritivo y beneficioso para la piel. La miel se valora por
+							sus propiedades hidratantes, antibacterianas y antioxidantes, lo que la convierte en un
+							ingrediente ideal para el cuidado corporal.
+						</p>
+						<a href="../NOSOTROS/index.html">
+						<div class="btn-read-more">Leer más</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer" id="Contacto">Información de Contacto</p>
+					<ul>
+						<li>
+							Calzada Roosevelt 35-83,
+							Zona 11, Guatemala
+						</li>
+						<li>Teléfono: 5322 - 9522</li>
+						<li>EmaiL: Tesoroscolmenares@gmail.com</li>
+					</ul>
+					<div class="social-icons">
+						<span class="facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</span>
+						<span class="twitter">
+							<i class="fa-brands fa-twitter"></i>
+						</span>
+						<span class="youtube">
+							<i class="fa-brands fa-youtube"></i>
+						</span>
+						<span class="pinterest">
+							<i class="fa-brands fa-pinterest-p"></i>
+						</span>
+						<span class="instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>
+					Luis Carlos Zapeta
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script src="script.js"></script>
+
+</body>
+
+</html>
